@@ -22,7 +22,7 @@ $wgHooks['UserCreateForm'][] = 'customUserCreateForm';
 function customUserCreateForm( &$template ) {
 
     // include the request global so we can grab the return page from it
-    global $wgRequest ;
+    global $wgRequest;
 
     // grab the return to page if this exists
     $mReturnTo = $wgRequest->getVal( 'returnto' );
@@ -41,14 +41,14 @@ function customUserCreateForm( &$template ) {
 
     // if there is a return to page adjust relevant links
     if ( !empty( $mReturnTo ) ) {
-            $returnto = '&returnto=' . wfUrlencode( $mReturnTo );
-            $q .= $returnto;
-            $linkq .= $returnto;
+        $returnto = '&returnto=' . wfUrlencode( $mReturnTo );
+        $q .= $returnto;
+        $linkq .= $returnto;
     }
 
     // add the old template data to the new template
     foreach ($tempData as $key => $value) {
-            $template->set( $key, $value ) ;
+        $template->set( $key, $value ) ;
     }
 
     // unset the temporary data var

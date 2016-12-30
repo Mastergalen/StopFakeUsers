@@ -94,6 +94,11 @@ class customUsercreateTemplate extends QuickTemplate {
 						</span>
 			    	</div>
 				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-4 col-sm-8">
+						<?php $this->html('extrafields') ?>
+					</div>
+				</div>
 				<div class="form-group" style="display: none;">
 					<label for="wpRealName" class="col-sm-4 control-label"><?php $this->msg('yourrealname') ?></label>
 			    	<div class="col-sm-8">
@@ -131,7 +136,7 @@ class customUsercreateTemplate extends QuickTemplate {
 		</div>
 		<div class="col-md-offset-1 col-md-4">
 			<p class="lead">Create a wiki account and start editing articles.</p>
-			<p id="userloginlink"><?php $this->html('link') ?></p>
+			<p id="userloginlink"><?php $this->html('UserLogin') ?></p>
 		</div>
 	</div>
 </div>
