@@ -5,7 +5,7 @@ class StopFakeUsersHooks {
 
 		//If user filled out real name
 		if ( $nameField != null ) {
-			var_dump("Detected as spam bot! Go away!");
+			echo "Detected as spam bot! Go away!";
 			return false;
 		}
 
@@ -14,7 +14,8 @@ class StopFakeUsersHooks {
 	}
 
 	public static function hideRealName(&$out) {
-		$out->addInlineStyle('#userlogin tr:first-child+tr+tr+tr+tr+tr{display: none;}');
+		$out->addInlineStyle('#userlogin #wpRealName{display:none;}');
+		# $out->addInlineStyle('#userlogin tr:first-child+tr+tr+tr+tr+tr{display: none;}');
 		return true;
 	}
 }
